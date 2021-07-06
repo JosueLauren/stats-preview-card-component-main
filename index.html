@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Inter">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Lexend+Deca">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root {
+      --Very-dark-blue: hsl(233, 47%, 7%);
+      --Dark-desaturated-blue: hsl(244, 38%, 16%);
+      --Soft-violet: hsl(277, 64%, 61%);
+    }
+
+    *{
+      padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      padding: 100px 0;
+      background-color: var(--Very-dark-blue);
+    }
+
+    .principal{
+      margin: auto;
+      width: 80%;
+      height: 400px;
+      display: flex;
+      
+     
+    }
+    .cabeçalho {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 50px;
+      background-color: var(--Dark-desaturated-blue);
+      border-radius: 10px 0 0 10px;
+    }
+
+    .imagem{
+      width: 50%;
+      height: 100%;
+      background-image: url(images/image-header-desktop.jpg);
+      background-size: cover;
+      border-radius: 0 10px 10px 0;
+    }
+
+     .fundo {
+       width: 100%;
+       height: 100%;
+       background-color: hsla(277, 64%, 61%, 0.5);
+       border-radius: 0 10px 10px 0;
+     }
+
+    .status {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      text-transform: uppercase;
+      font-size: 10px;
+      color: hsla(0, 0%, 100%, 0.6);
+    }
+
+    .status p {
+      letter-spacing: 1px;
+    }
+
+    b {
+      font-size: 15px;
+      color: white;
+    }
+
+
+    .conteudo p {
+      font-size: 15px;
+      width: 100%;
+      color: hsla(0, 0%, 100%, 0.75);
+      line-height: 1.3;
+    }
+
+
+    .titulo {
+      width: 100%;
+      font-size: 25px;
+      color: white;
+    }
+
+    .titulo h1 span {
+      color: var(--Soft-violet);
+    }
+
+    @media screen and (max-width: 900px ) {
+      .principal{
+          flex-direction: column-reverse;
+          align-items: center;
+          width: 100%;
+          height: 700px;
+          
+        }
+
+        .imagem {
+          background-image: url(images/image-header-mobile.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+
+        }
+
+        .imagem, .fundo {
+          border-radius: 10px 10px 0 0;
+        }
+
+
+      .cabeçalho {
+          text-align: center;
+          border-radius: 0 0 10px 10px;
+          
+        }
+
+        .titulo {
+          font-size: 15px;
+          margin: 0px 0px 20px 0px;
+        }
+
+        .conteudo {
+          font-size: 12px;
+          margin-bottom: 20px;
+        }
+
+        .status {
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+        .status p:not(p:last-child) {
+          margin-bottom: 20px;
+        }
+    }
+  </style>
+</head>
+<body>
+  <main class="principal">
+    <article class="cabeçalho">
+      <div class="titulo">
+        <h1>Get <span>insights</span> that help your business grow.</h1>
+      </div>
+      <div class="conteudo">
+        <p>Discover the benefits of data analytics and make 
+          better decisions regarding revenue, customer
+          experience, and overall efficiency.</p>
+      </div>
+      <div class="status">
+        <p><span><b>10k+</b></span><br>companies</p>
+        <p><span><b>314</b></span><br>templates</p>
+        <p><span><b>12m+</b></span><br>queries</p>
+      </div>
+    </article>
+    <aside class="imagem">
+      <div class="fundo"></div>
+    </aside>
+  </main>
+  <!--<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>. --> 
+  </div>
+</body>
+</html>
